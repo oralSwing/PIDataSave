@@ -1,0 +1,3109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="YDSM" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="YDSM" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="YDSM">
+      <s:element name="MC_Unusable">
+        <s:complexType />
+      </s:element>
+      <s:element name="MC_UnusableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MC_UnusableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MC_State">
+        <s:complexType />
+      </s:element>
+      <s:element name="MC_StateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MC_StateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VolumeAvailable">
+        <s:complexType />
+      </s:element>
+      <s:element name="VolumeAvailableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VolumeAvailableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCoalYardInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="yardstr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCoalYardInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCoalYardInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MD_Sorting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MC_Selected_1st" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MD_SortingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MD_SortingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BW_State">
+        <s:complexType />
+      </s:element>
+      <s:element name="BW_StateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BW_StateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Blank_Sorting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="volume" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Blank_SortingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Blank_SortingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JsonToBoilerDefault">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="JsonToBoilerDefaultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="JsonToBoilerDefaultResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CoalMix">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="icoalListStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accounting" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CoalMixResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CoalMixResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CoalMixOpt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="iCoalID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iWeight" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iCoalListStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iBoilerSN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="boilerDefaultStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CoalMixOptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CoalMixOptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleTGAndDTG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="report" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSingleTGAndDTGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSingleTGAndDTGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="icoalListStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accounting" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DTG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="icoalListStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="accounting" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DTGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DTGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MD_Unusable">
+        <s:complexType />
+      </s:element>
+      <s:element name="MD_UnusableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MD_UnusableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Blank_Unusable">
+        <s:complexType />
+      </s:element>
+      <s:element name="Blank_UnusableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Blank_UnusableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LMQStates">
+        <s:complexType />
+      </s:element>
+      <s:element name="LMQStatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LMQStatesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PIValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PIPoint" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PIValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PIValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalIdOnBelt10">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCoalIdOnBelt10Response">
+        <s:complexType />
+      </s:element>
+      <s:element name="PITimedValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PIPoint" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Delay" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PITimedValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PITimedValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bucketNumber" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCoalIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MCVolume">
+        <s:complexType />
+      </s:element>
+      <s:element name="MCVolumeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MCVolumeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MCEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OldCoalIDs" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NewCoalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MCEditResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCoalVolume">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MC" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalVolumeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCoalVolumeResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVolume">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MW" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVolumeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetVolumeResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditCoalYard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditCoalYardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EditCoalYardResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearSeam">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="StackID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CoalID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="index" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="editBefore" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearSeamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClearSeamResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShipLatest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="shipName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShipLatestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShipLatestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PIRead">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="piSrv" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PIReadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PIReadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PICalc">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="expr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PICalcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PICalcResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSampleCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSampleCodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WorklistSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="worklist" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WorklistSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WorklistSendResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalConsumption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalConsumptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoalConsumptionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalConsumptionTrend">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCoalConsumptionTrendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoalConsumptionTrendResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShipWithPrice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="offset" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="limit" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShipWithPriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShipWithPriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalPriceTrend">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCoalPriceTrendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoalPriceTrendResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoalYard">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCoalYardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoalYardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDuiQuContent">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDuiQuContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDuiQuContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetShippingListContent">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetShippingListContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShippingListContentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="anyType" nillable="true" />
+      <s:element name="int" type="s:int" />
+      <s:element name="double" type="s:double" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MC_UnusableSoapIn">
+    <wsdl:part name="parameters" element="tns:MC_Unusable" />
+  </wsdl:message>
+  <wsdl:message name="MC_UnusableSoapOut">
+    <wsdl:part name="parameters" element="tns:MC_UnusableResponse" />
+  </wsdl:message>
+  <wsdl:message name="MC_StateSoapIn">
+    <wsdl:part name="parameters" element="tns:MC_State" />
+  </wsdl:message>
+  <wsdl:message name="MC_StateSoapOut">
+    <wsdl:part name="parameters" element="tns:MC_StateResponse" />
+  </wsdl:message>
+  <wsdl:message name="VolumeAvailableSoapIn">
+    <wsdl:part name="parameters" element="tns:VolumeAvailable" />
+  </wsdl:message>
+  <wsdl:message name="VolumeAvailableSoapOut">
+    <wsdl:part name="parameters" element="tns:VolumeAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCoalYardInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCoalYardInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCoalYardInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCoalYardInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MD_SortingSoapIn">
+    <wsdl:part name="parameters" element="tns:MD_Sorting" />
+  </wsdl:message>
+  <wsdl:message name="MD_SortingSoapOut">
+    <wsdl:part name="parameters" element="tns:MD_SortingResponse" />
+  </wsdl:message>
+  <wsdl:message name="BW_StateSoapIn">
+    <wsdl:part name="parameters" element="tns:BW_State" />
+  </wsdl:message>
+  <wsdl:message name="BW_StateSoapOut">
+    <wsdl:part name="parameters" element="tns:BW_StateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Blank_SortingSoapIn">
+    <wsdl:part name="parameters" element="tns:Blank_Sorting" />
+  </wsdl:message>
+  <wsdl:message name="Blank_SortingSoapOut">
+    <wsdl:part name="parameters" element="tns:Blank_SortingResponse" />
+  </wsdl:message>
+  <wsdl:message name="JsonToBoilerDefaultSoapIn">
+    <wsdl:part name="parameters" element="tns:JsonToBoilerDefault" />
+  </wsdl:message>
+  <wsdl:message name="JsonToBoilerDefaultSoapOut">
+    <wsdl:part name="parameters" element="tns:JsonToBoilerDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixSoapIn">
+    <wsdl:part name="parameters" element="tns:CoalMix" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixSoapOut">
+    <wsdl:part name="parameters" element="tns:CoalMixResponse" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixOptSoapIn">
+    <wsdl:part name="parameters" element="tns:CoalMixOpt" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixOptSoapOut">
+    <wsdl:part name="parameters" element="tns:CoalMixOptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleTGAndDTGSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSingleTGAndDTG" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleTGAndDTGSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSingleTGAndDTGResponse" />
+  </wsdl:message>
+  <wsdl:message name="TGSoapIn">
+    <wsdl:part name="parameters" element="tns:TG" />
+  </wsdl:message>
+  <wsdl:message name="TGSoapOut">
+    <wsdl:part name="parameters" element="tns:TGResponse" />
+  </wsdl:message>
+  <wsdl:message name="DTGSoapIn">
+    <wsdl:part name="parameters" element="tns:DTG" />
+  </wsdl:message>
+  <wsdl:message name="DTGSoapOut">
+    <wsdl:part name="parameters" element="tns:DTGResponse" />
+  </wsdl:message>
+  <wsdl:message name="MD_UnusableSoapIn">
+    <wsdl:part name="parameters" element="tns:MD_Unusable" />
+  </wsdl:message>
+  <wsdl:message name="MD_UnusableSoapOut">
+    <wsdl:part name="parameters" element="tns:MD_UnusableResponse" />
+  </wsdl:message>
+  <wsdl:message name="Blank_UnusableSoapIn">
+    <wsdl:part name="parameters" element="tns:Blank_Unusable" />
+  </wsdl:message>
+  <wsdl:message name="Blank_UnusableSoapOut">
+    <wsdl:part name="parameters" element="tns:Blank_UnusableResponse" />
+  </wsdl:message>
+  <wsdl:message name="LMQStatesSoapIn">
+    <wsdl:part name="parameters" element="tns:LMQStates" />
+  </wsdl:message>
+  <wsdl:message name="LMQStatesSoapOut">
+    <wsdl:part name="parameters" element="tns:LMQStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PIValueSoapIn">
+    <wsdl:part name="parameters" element="tns:PIValue" />
+  </wsdl:message>
+  <wsdl:message name="PIValueSoapOut">
+    <wsdl:part name="parameters" element="tns:PIValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIdOnBelt10SoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalIdOnBelt10" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIdOnBelt10SoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalIdOnBelt10Response" />
+  </wsdl:message>
+  <wsdl:message name="PITimedValueSoapIn">
+    <wsdl:part name="parameters" element="tns:PITimedValue" />
+  </wsdl:message>
+  <wsdl:message name="PITimedValueSoapOut">
+    <wsdl:part name="parameters" element="tns:PITimedValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalID" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="MCVolumeSoapIn">
+    <wsdl:part name="parameters" element="tns:MCVolume" />
+  </wsdl:message>
+  <wsdl:message name="MCVolumeSoapOut">
+    <wsdl:part name="parameters" element="tns:MCVolumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MCEditSoapIn">
+    <wsdl:part name="parameters" element="tns:MCEdit" />
+  </wsdl:message>
+  <wsdl:message name="MCEditSoapOut">
+    <wsdl:part name="parameters" element="tns:MCEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalVolumeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalVolume" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalVolumeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalVolumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVolumeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVolume" />
+  </wsdl:message>
+  <wsdl:message name="GetVolumeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVolumeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditCoalYardSoapIn">
+    <wsdl:part name="parameters" element="tns:EditCoalYard" />
+  </wsdl:message>
+  <wsdl:message name="EditCoalYardSoapOut">
+    <wsdl:part name="parameters" element="tns:EditCoalYardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearSeamSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearSeam" />
+  </wsdl:message>
+  <wsdl:message name="ClearSeamSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearSeamResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShipLatestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShipLatest" />
+  </wsdl:message>
+  <wsdl:message name="GetShipLatestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShipLatestResponse" />
+  </wsdl:message>
+  <wsdl:message name="PIReadSoapIn">
+    <wsdl:part name="parameters" element="tns:PIRead" />
+  </wsdl:message>
+  <wsdl:message name="PIReadSoapOut">
+    <wsdl:part name="parameters" element="tns:PIReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="PICalcSoapIn">
+    <wsdl:part name="parameters" element="tns:PICalc" />
+  </wsdl:message>
+  <wsdl:message name="PICalcSoapOut">
+    <wsdl:part name="parameters" element="tns:PICalcResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSampleCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSampleCode" />
+  </wsdl:message>
+  <wsdl:message name="SendSampleCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSampleCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="WorklistSendSoapIn">
+    <wsdl:part name="parameters" element="tns:WorklistSend" />
+  </wsdl:message>
+  <wsdl:message name="WorklistSendSoapOut">
+    <wsdl:part name="parameters" element="tns:WorklistSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalConsumption" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalConsumptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionTrendSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalConsumptionTrend" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionTrendSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalConsumptionTrendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShipWithPriceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShipWithPrice" />
+  </wsdl:message>
+  <wsdl:message name="GetShipWithPriceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShipWithPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalPriceTrendSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalPriceTrend" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalPriceTrendSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalPriceTrendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalYardSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoalYard" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalYardSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoalYardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDuiQuContentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDuiQuContent" />
+  </wsdl:message>
+  <wsdl:message name="GetDuiQuContentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDuiQuContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingListContentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShippingListContent" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingListContentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShippingListContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="MC_UnusableHttpGetIn" />
+  <wsdl:message name="MC_UnusableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MC_StateHttpGetIn" />
+  <wsdl:message name="MC_StateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VolumeAvailableHttpGetIn" />
+  <wsdl:message name="VolumeAvailableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCoalYardInfoHttpGetIn">
+    <wsdl:part name="yardstr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCoalYardInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MD_SortingHttpGetIn">
+    <wsdl:part name="MC_Selected_1st" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MD_SortingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BW_StateHttpGetIn" />
+  <wsdl:message name="BW_StateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Blank_SortingHttpGetIn">
+    <wsdl:part name="volume" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Blank_SortingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="JsonToBoilerDefaultHttpGetIn">
+    <wsdl:part name="jsonStr" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JsonToBoilerDefaultHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixHttpGetIn">
+    <wsdl:part name="icoalListStr" type="s:string" />
+    <wsdl:part name="accounting" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixOptHttpGetIn">
+    <wsdl:part name="iCoalID" type="s:string" />
+    <wsdl:part name="iWeight" type="s:string" />
+    <wsdl:part name="iCoalListStr" type="s:string" />
+    <wsdl:part name="iBoilerSN" type="s:string" />
+    <wsdl:part name="boilerDefaultStr" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixOptHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleTGAndDTGHttpGetIn">
+    <wsdl:part name="report" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleTGAndDTGHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TGHttpGetIn">
+    <wsdl:part name="icoalListStr" type="s:string" />
+    <wsdl:part name="accounting" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TGHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DTGHttpGetIn">
+    <wsdl:part name="icoalListStr" type="s:string" />
+    <wsdl:part name="accounting" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DTGHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MD_UnusableHttpGetIn" />
+  <wsdl:message name="MD_UnusableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Blank_UnusableHttpGetIn" />
+  <wsdl:message name="Blank_UnusableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LMQStatesHttpGetIn" />
+  <wsdl:message name="LMQStatesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PIValueHttpGetIn">
+    <wsdl:part name="PIPoint" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PIValueHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIdOnBelt10HttpGetIn" />
+  <wsdl:message name="GetCoalIdOnBelt10HttpGetOut" />
+  <wsdl:message name="PITimedValueHttpGetIn">
+    <wsdl:part name="PIPoint" type="s:string" />
+    <wsdl:part name="Delay" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PITimedValueHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIDHttpGetIn">
+    <wsdl:part name="company" type="s:string" />
+    <wsdl:part name="bucketNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="MCVolumeHttpGetIn" />
+  <wsdl:message name="MCVolumeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MCEditHttpGetIn">
+    <wsdl:part name="OldCoalIDs" type="s:string" />
+    <wsdl:part name="NewCoalID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MCEditHttpGetOut" />
+  <wsdl:message name="GetCoalVolumeHttpGetIn">
+    <wsdl:part name="MC" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalVolumeHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetVolumeHttpGetIn">
+    <wsdl:part name="MW" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVolumeHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="EditCoalYardHttpGetIn">
+    <wsdl:part name="str" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditCoalYardHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ClearSeamHttpGetIn">
+    <wsdl:part name="StackID" type="s:string" />
+    <wsdl:part name="CoalID" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="index" type="s:string" />
+    <wsdl:part name="editBefore" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClearSeamHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetShipLatestHttpGetIn">
+    <wsdl:part name="shipName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShipLatestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PIReadHttpGetIn">
+    <wsdl:part name="sql" type="s:string" />
+    <wsdl:part name="piSrv" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PIReadHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PICalcHttpGetIn">
+    <wsdl:part name="expr" type="s:string" />
+    <wsdl:part name="time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PICalcHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSampleCodeHttpGetIn">
+    <wsdl:part name="data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSampleCodeHttpGetOut" />
+  <wsdl:message name="WorklistSendHttpGetIn">
+    <wsdl:part name="worklist" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WorklistSendHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionHttpGetIn">
+    <wsdl:part name="year" type="s:string" />
+    <wsdl:part name="month" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionTrendHttpGetIn" />
+  <wsdl:message name="GetCoalConsumptionTrendHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShipWithPriceHttpGetIn">
+    <wsdl:part name="offset" type="s:string" />
+    <wsdl:part name="limit" type="s:string" />
+    <wsdl:part name="search" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShipWithPriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalPriceTrendHttpGetIn" />
+  <wsdl:message name="GetCoalPriceTrendHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalYardHttpGetIn" />
+  <wsdl:message name="GetCoalYardHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDuiQuContentHttpGetIn" />
+  <wsdl:message name="GetDuiQuContentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingListContentHttpGetIn" />
+  <wsdl:message name="GetShippingListContentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MC_UnusableHttpPostIn" />
+  <wsdl:message name="MC_UnusableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MC_StateHttpPostIn" />
+  <wsdl:message name="MC_StateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VolumeAvailableHttpPostIn" />
+  <wsdl:message name="VolumeAvailableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCoalYardInfoHttpPostIn">
+    <wsdl:part name="yardstr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCoalYardInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MD_SortingHttpPostIn">
+    <wsdl:part name="MC_Selected_1st" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MD_SortingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="BW_StateHttpPostIn" />
+  <wsdl:message name="BW_StateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Blank_SortingHttpPostIn">
+    <wsdl:part name="volume" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Blank_SortingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="JsonToBoilerDefaultHttpPostIn">
+    <wsdl:part name="jsonStr" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="JsonToBoilerDefaultHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixHttpPostIn">
+    <wsdl:part name="icoalListStr" type="s:string" />
+    <wsdl:part name="accounting" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixOptHttpPostIn">
+    <wsdl:part name="iCoalID" type="s:string" />
+    <wsdl:part name="iWeight" type="s:string" />
+    <wsdl:part name="iCoalListStr" type="s:string" />
+    <wsdl:part name="iBoilerSN" type="s:string" />
+    <wsdl:part name="boilerDefaultStr" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CoalMixOptHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleTGAndDTGHttpPostIn">
+    <wsdl:part name="report" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSingleTGAndDTGHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TGHttpPostIn">
+    <wsdl:part name="icoalListStr" type="s:string" />
+    <wsdl:part name="accounting" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TGHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DTGHttpPostIn">
+    <wsdl:part name="icoalListStr" type="s:string" />
+    <wsdl:part name="accounting" type="s:string" />
+    <wsdl:part name="company" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DTGHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MD_UnusableHttpPostIn" />
+  <wsdl:message name="MD_UnusableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Blank_UnusableHttpPostIn" />
+  <wsdl:message name="Blank_UnusableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LMQStatesHttpPostIn" />
+  <wsdl:message name="LMQStatesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PIValueHttpPostIn">
+    <wsdl:part name="PIPoint" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PIValueHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIdOnBelt10HttpPostIn" />
+  <wsdl:message name="GetCoalIdOnBelt10HttpPostOut" />
+  <wsdl:message name="PITimedValueHttpPostIn">
+    <wsdl:part name="PIPoint" type="s:string" />
+    <wsdl:part name="Delay" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PITimedValueHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIDHttpPostIn">
+    <wsdl:part name="company" type="s:string" />
+    <wsdl:part name="bucketNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="MCVolumeHttpPostIn" />
+  <wsdl:message name="MCVolumeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MCEditHttpPostIn">
+    <wsdl:part name="OldCoalIDs" type="s:string" />
+    <wsdl:part name="NewCoalID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MCEditHttpPostOut" />
+  <wsdl:message name="GetCoalVolumeHttpPostIn">
+    <wsdl:part name="MC" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalVolumeHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetVolumeHttpPostIn">
+    <wsdl:part name="MW" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetVolumeHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="EditCoalYardHttpPostIn">
+    <wsdl:part name="str" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EditCoalYardHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="ClearSeamHttpPostIn">
+    <wsdl:part name="StackID" type="s:string" />
+    <wsdl:part name="CoalID" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="index" type="s:string" />
+    <wsdl:part name="editBefore" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClearSeamHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetShipLatestHttpPostIn">
+    <wsdl:part name="shipName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShipLatestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PIReadHttpPostIn">
+    <wsdl:part name="sql" type="s:string" />
+    <wsdl:part name="piSrv" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PIReadHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PICalcHttpPostIn">
+    <wsdl:part name="expr" type="s:string" />
+    <wsdl:part name="time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PICalcHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSampleCodeHttpPostIn">
+    <wsdl:part name="data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSampleCodeHttpPostOut" />
+  <wsdl:message name="WorklistSendHttpPostIn">
+    <wsdl:part name="worklist" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="WorklistSendHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionHttpPostIn">
+    <wsdl:part name="year" type="s:string" />
+    <wsdl:part name="month" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalConsumptionTrendHttpPostIn" />
+  <wsdl:message name="GetCoalConsumptionTrendHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShipWithPriceHttpPostIn">
+    <wsdl:part name="offset" type="s:string" />
+    <wsdl:part name="limit" type="s:string" />
+    <wsdl:part name="search" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShipWithPriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalPriceTrendHttpPostIn" />
+  <wsdl:message name="GetCoalPriceTrendHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCoalYardHttpPostIn" />
+  <wsdl:message name="GetCoalYardHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDuiQuContentHttpPostIn" />
+  <wsdl:message name="GetDuiQuContentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetShippingListContentHttpPostIn" />
+  <wsdl:message name="GetShippingListContentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="MC_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据斗轮机和皮带状态判断不可操作煤场</wsdl:documentation>
+      <wsdl:input message="tns:MC_UnusableSoapIn" />
+      <wsdl:output message="tns:MC_UnusableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据斗轮机和皮带状态判断可操作煤场</wsdl:documentation>
+      <wsdl:input message="tns:MC_StateSoapIn" />
+      <wsdl:output message="tns:MC_StateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据存煤情况计算剩余可堆放煤量</wsdl:documentation>
+      <wsdl:input message="tns:VolumeAvailableSoapIn" />
+      <wsdl:output message="tns:VolumeAvailableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">可操作煤场煤堆信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAllCoalYardInfoSoapIn" />
+      <wsdl:output message="tns:GetAllCoalYardInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取料排序,输入MC_Selected_1st为第一次选择的煤仓（string），如'A,B,C,E'，返回数据为字符串，如'4-123,5-123'</wsdl:documentation>
+      <wsdl:input message="tns:MD_SortingSoapIn" />
+      <wsdl:output message="tns:MD_SortingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回可卸煤泊位</wsdl:documentation>
+      <wsdl:input message="tns:BW_StateSoapIn" />
+      <wsdl:output message="tns:BW_StateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">堆料排序,输入为预计堆煤煤量volume（Int32）,返回数据为字符串,如'1-1,1-2,2-1'</wsdl:documentation>
+      <wsdl:input message="tns:Blank_SortingSoapIn" />
+      <wsdl:output message="tns:Blank_SortingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <wsdl:input message="tns:JsonToBoilerDefaultSoapIn" />
+      <wsdl:output message="tns:JsonToBoilerDefaultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回混煤参数</wsdl:documentation>
+      <wsdl:input message="tns:CoalMixSoapIn" />
+      <wsdl:output message="tns:CoalMixSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回掺配方案排序</wsdl:documentation>
+      <wsdl:input message="tns:CoalMixOptSoapIn" />
+      <wsdl:output message="tns:CoalMixOptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回单一煤种燃烧曲线</wsdl:documentation>
+      <wsdl:input message="tns:GetSingleTGAndDTGSoapIn" />
+      <wsdl:output message="tns:GetSingleTGAndDTGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回TG纵坐标</wsdl:documentation>
+      <wsdl:input message="tns:TGSoapIn" />
+      <wsdl:output message="tns:TGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回DTG纵坐标</wsdl:documentation>
+      <wsdl:input message="tns:DTGSoapIn" />
+      <wsdl:output message="tns:DTGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回不可操作煤场所有煤堆</wsdl:documentation>
+      <wsdl:input message="tns:MD_UnusableSoapIn" />
+      <wsdl:output message="tns:MD_UnusableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回不可操作煤场所有空煤堆</wsdl:documentation>
+      <wsdl:input message="tns:Blank_UnusableSoapIn" />
+      <wsdl:output message="tns:Blank_UnusableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">落煤犁煤器</wsdl:documentation>
+      <wsdl:input message="tns:LMQStatesSoapIn" />
+      <wsdl:output message="tns:LMQStatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PI当前值查询</wsdl:documentation>
+      <wsdl:input message="tns:PIValueSoapIn" />
+      <wsdl:output message="tns:PIValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取#10皮带上煤种</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalIdOnBelt10SoapIn" />
+      <wsdl:output message="tns:GetCoalIdOnBelt10SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PI当前值查询</wsdl:documentation>
+      <wsdl:input message="tns:PITimedValueSoapIn" />
+      <wsdl:output message="tns:PITimedValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">斗轮机堆料时煤种化验单号</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalIDSoapIn" />
+      <wsdl:output message="tns:GetCoalIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓煤种总煤量获取</wsdl:documentation>
+      <wsdl:input message="tns:MCVolumeSoapIn" />
+      <wsdl:output message="tns:MCVolumeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓煤种修改</wsdl:documentation>
+      <wsdl:input message="tns:MCEditSoapIn" />
+      <wsdl:output message="tns:MCEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓总煤量计算</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalVolumeSoapIn" />
+      <wsdl:output message="tns:GetCoalVolumeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">按煤位计算体积</wsdl:documentation>
+      <wsdl:input message="tns:GetVolumeSoapIn" />
+      <wsdl:output message="tns:GetVolumeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">编辑煤堆煤量信息</wsdl:documentation>
+      <wsdl:input message="tns:EditCoalYardSoapIn" />
+      <wsdl:output message="tns:EditCoalYardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤堆清空操作</wsdl:documentation>
+      <wsdl:input message="tns:ClearSeamSoapIn" />
+      <wsdl:output message="tns:ClearSeamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">船舶最新数据查询</wsdl:documentation>
+      <wsdl:input message="tns:GetShipLatestSoapIn" />
+      <wsdl:output message="tns:GetShipLatestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">POOLEDB读取pi数据</wsdl:documentation>
+      <wsdl:input message="tns:PIReadSoapIn" />
+      <wsdl:output message="tns:PIReadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PIOLEDB读取pi数据</wsdl:documentation>
+      <wsdl:input message="tns:PICalcSoapIn" />
+      <wsdl:output message="tns:PICalcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <wsdl:input message="tns:SendSampleCodeSoapIn" />
+      <wsdl:output message="tns:SendSampleCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">将文本发送至输煤程控</wsdl:documentation>
+      <wsdl:input message="tns:WorklistSendSoapIn" />
+      <wsdl:output message="tns:WorklistSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤耗数据</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalConsumptionSoapIn" />
+      <wsdl:output message="tns:GetCoalConsumptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤耗趋势数据</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalConsumptionTrendSoapIn" />
+      <wsdl:output message="tns:GetCoalConsumptionTrendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取船运数据及煤价</wsdl:documentation>
+      <wsdl:input message="tns:GetShipWithPriceSoapIn" />
+      <wsdl:output message="tns:GetShipWithPriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤价趋势</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalPriceTrendSoapIn" />
+      <wsdl:output message="tns:GetCoalPriceTrendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤场详情</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalYardSoapIn" />
+      <wsdl:output message="tns:GetCoalYardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <wsdl:input message="tns:GetDuiQuContentSoapIn" />
+      <wsdl:output message="tns:GetDuiQuContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <wsdl:input message="tns:GetShippingListContentSoapIn" />
+      <wsdl:output message="tns:GetShippingListContentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpGet">
+    <wsdl:operation name="MC_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据斗轮机和皮带状态判断不可操作煤场</wsdl:documentation>
+      <wsdl:input message="tns:MC_UnusableHttpGetIn" />
+      <wsdl:output message="tns:MC_UnusableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据斗轮机和皮带状态判断可操作煤场</wsdl:documentation>
+      <wsdl:input message="tns:MC_StateHttpGetIn" />
+      <wsdl:output message="tns:MC_StateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据存煤情况计算剩余可堆放煤量</wsdl:documentation>
+      <wsdl:input message="tns:VolumeAvailableHttpGetIn" />
+      <wsdl:output message="tns:VolumeAvailableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">可操作煤场煤堆信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAllCoalYardInfoHttpGetIn" />
+      <wsdl:output message="tns:GetAllCoalYardInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取料排序,输入MC_Selected_1st为第一次选择的煤仓（string），如'A,B,C,E'，返回数据为字符串，如'4-123,5-123'</wsdl:documentation>
+      <wsdl:input message="tns:MD_SortingHttpGetIn" />
+      <wsdl:output message="tns:MD_SortingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回可卸煤泊位</wsdl:documentation>
+      <wsdl:input message="tns:BW_StateHttpGetIn" />
+      <wsdl:output message="tns:BW_StateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">堆料排序,输入为预计堆煤煤量volume（Int32）,返回数据为字符串,如'1-1,1-2,2-1'</wsdl:documentation>
+      <wsdl:input message="tns:Blank_SortingHttpGetIn" />
+      <wsdl:output message="tns:Blank_SortingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <wsdl:input message="tns:JsonToBoilerDefaultHttpGetIn" />
+      <wsdl:output message="tns:JsonToBoilerDefaultHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回混煤参数</wsdl:documentation>
+      <wsdl:input message="tns:CoalMixHttpGetIn" />
+      <wsdl:output message="tns:CoalMixHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回掺配方案排序</wsdl:documentation>
+      <wsdl:input message="tns:CoalMixOptHttpGetIn" />
+      <wsdl:output message="tns:CoalMixOptHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回单一煤种燃烧曲线</wsdl:documentation>
+      <wsdl:input message="tns:GetSingleTGAndDTGHttpGetIn" />
+      <wsdl:output message="tns:GetSingleTGAndDTGHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回TG纵坐标</wsdl:documentation>
+      <wsdl:input message="tns:TGHttpGetIn" />
+      <wsdl:output message="tns:TGHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回DTG纵坐标</wsdl:documentation>
+      <wsdl:input message="tns:DTGHttpGetIn" />
+      <wsdl:output message="tns:DTGHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回不可操作煤场所有煤堆</wsdl:documentation>
+      <wsdl:input message="tns:MD_UnusableHttpGetIn" />
+      <wsdl:output message="tns:MD_UnusableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回不可操作煤场所有空煤堆</wsdl:documentation>
+      <wsdl:input message="tns:Blank_UnusableHttpGetIn" />
+      <wsdl:output message="tns:Blank_UnusableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">落煤犁煤器</wsdl:documentation>
+      <wsdl:input message="tns:LMQStatesHttpGetIn" />
+      <wsdl:output message="tns:LMQStatesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PI当前值查询</wsdl:documentation>
+      <wsdl:input message="tns:PIValueHttpGetIn" />
+      <wsdl:output message="tns:PIValueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取#10皮带上煤种</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalIdOnBelt10HttpGetIn" />
+      <wsdl:output message="tns:GetCoalIdOnBelt10HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PI当前值查询</wsdl:documentation>
+      <wsdl:input message="tns:PITimedValueHttpGetIn" />
+      <wsdl:output message="tns:PITimedValueHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">斗轮机堆料时煤种化验单号</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalIDHttpGetIn" />
+      <wsdl:output message="tns:GetCoalIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓煤种总煤量获取</wsdl:documentation>
+      <wsdl:input message="tns:MCVolumeHttpGetIn" />
+      <wsdl:output message="tns:MCVolumeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓煤种修改</wsdl:documentation>
+      <wsdl:input message="tns:MCEditHttpGetIn" />
+      <wsdl:output message="tns:MCEditHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓总煤量计算</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalVolumeHttpGetIn" />
+      <wsdl:output message="tns:GetCoalVolumeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">按煤位计算体积</wsdl:documentation>
+      <wsdl:input message="tns:GetVolumeHttpGetIn" />
+      <wsdl:output message="tns:GetVolumeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">编辑煤堆煤量信息</wsdl:documentation>
+      <wsdl:input message="tns:EditCoalYardHttpGetIn" />
+      <wsdl:output message="tns:EditCoalYardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤堆清空操作</wsdl:documentation>
+      <wsdl:input message="tns:ClearSeamHttpGetIn" />
+      <wsdl:output message="tns:ClearSeamHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">船舶最新数据查询</wsdl:documentation>
+      <wsdl:input message="tns:GetShipLatestHttpGetIn" />
+      <wsdl:output message="tns:GetShipLatestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">POOLEDB读取pi数据</wsdl:documentation>
+      <wsdl:input message="tns:PIReadHttpGetIn" />
+      <wsdl:output message="tns:PIReadHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PIOLEDB读取pi数据</wsdl:documentation>
+      <wsdl:input message="tns:PICalcHttpGetIn" />
+      <wsdl:output message="tns:PICalcHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <wsdl:input message="tns:SendSampleCodeHttpGetIn" />
+      <wsdl:output message="tns:SendSampleCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">将文本发送至输煤程控</wsdl:documentation>
+      <wsdl:input message="tns:WorklistSendHttpGetIn" />
+      <wsdl:output message="tns:WorklistSendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤耗数据</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalConsumptionHttpGetIn" />
+      <wsdl:output message="tns:GetCoalConsumptionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤耗趋势数据</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalConsumptionTrendHttpGetIn" />
+      <wsdl:output message="tns:GetCoalConsumptionTrendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取船运数据及煤价</wsdl:documentation>
+      <wsdl:input message="tns:GetShipWithPriceHttpGetIn" />
+      <wsdl:output message="tns:GetShipWithPriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤价趋势</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalPriceTrendHttpGetIn" />
+      <wsdl:output message="tns:GetCoalPriceTrendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤场详情</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalYardHttpGetIn" />
+      <wsdl:output message="tns:GetCoalYardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <wsdl:input message="tns:GetDuiQuContentHttpGetIn" />
+      <wsdl:output message="tns:GetDuiQuContentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <wsdl:input message="tns:GetShippingListContentHttpGetIn" />
+      <wsdl:output message="tns:GetShippingListContentHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpPost">
+    <wsdl:operation name="MC_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据斗轮机和皮带状态判断不可操作煤场</wsdl:documentation>
+      <wsdl:input message="tns:MC_UnusableHttpPostIn" />
+      <wsdl:output message="tns:MC_UnusableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据斗轮机和皮带状态判断可操作煤场</wsdl:documentation>
+      <wsdl:input message="tns:MC_StateHttpPostIn" />
+      <wsdl:output message="tns:MC_StateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据存煤情况计算剩余可堆放煤量</wsdl:documentation>
+      <wsdl:input message="tns:VolumeAvailableHttpPostIn" />
+      <wsdl:output message="tns:VolumeAvailableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">可操作煤场煤堆信息</wsdl:documentation>
+      <wsdl:input message="tns:GetAllCoalYardInfoHttpPostIn" />
+      <wsdl:output message="tns:GetAllCoalYardInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">取料排序,输入MC_Selected_1st为第一次选择的煤仓（string），如'A,B,C,E'，返回数据为字符串，如'4-123,5-123'</wsdl:documentation>
+      <wsdl:input message="tns:MD_SortingHttpPostIn" />
+      <wsdl:output message="tns:MD_SortingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回可卸煤泊位</wsdl:documentation>
+      <wsdl:input message="tns:BW_StateHttpPostIn" />
+      <wsdl:output message="tns:BW_StateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">堆料排序,输入为预计堆煤煤量volume（Int32）,返回数据为字符串,如'1-1,1-2,2-1'</wsdl:documentation>
+      <wsdl:input message="tns:Blank_SortingHttpPostIn" />
+      <wsdl:output message="tns:Blank_SortingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <wsdl:input message="tns:JsonToBoilerDefaultHttpPostIn" />
+      <wsdl:output message="tns:JsonToBoilerDefaultHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回混煤参数</wsdl:documentation>
+      <wsdl:input message="tns:CoalMixHttpPostIn" />
+      <wsdl:output message="tns:CoalMixHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回掺配方案排序</wsdl:documentation>
+      <wsdl:input message="tns:CoalMixOptHttpPostIn" />
+      <wsdl:output message="tns:CoalMixOptHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回单一煤种燃烧曲线</wsdl:documentation>
+      <wsdl:input message="tns:GetSingleTGAndDTGHttpPostIn" />
+      <wsdl:output message="tns:GetSingleTGAndDTGHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回TG纵坐标</wsdl:documentation>
+      <wsdl:input message="tns:TGHttpPostIn" />
+      <wsdl:output message="tns:TGHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回DTG纵坐标</wsdl:documentation>
+      <wsdl:input message="tns:DTGHttpPostIn" />
+      <wsdl:output message="tns:DTGHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回不可操作煤场所有煤堆</wsdl:documentation>
+      <wsdl:input message="tns:MD_UnusableHttpPostIn" />
+      <wsdl:output message="tns:MD_UnusableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">返回不可操作煤场所有空煤堆</wsdl:documentation>
+      <wsdl:input message="tns:Blank_UnusableHttpPostIn" />
+      <wsdl:output message="tns:Blank_UnusableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">落煤犁煤器</wsdl:documentation>
+      <wsdl:input message="tns:LMQStatesHttpPostIn" />
+      <wsdl:output message="tns:LMQStatesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PI当前值查询</wsdl:documentation>
+      <wsdl:input message="tns:PIValueHttpPostIn" />
+      <wsdl:output message="tns:PIValueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取#10皮带上煤种</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalIdOnBelt10HttpPostIn" />
+      <wsdl:output message="tns:GetCoalIdOnBelt10HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PI当前值查询</wsdl:documentation>
+      <wsdl:input message="tns:PITimedValueHttpPostIn" />
+      <wsdl:output message="tns:PITimedValueHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">斗轮机堆料时煤种化验单号</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalIDHttpPostIn" />
+      <wsdl:output message="tns:GetCoalIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓煤种总煤量获取</wsdl:documentation>
+      <wsdl:input message="tns:MCVolumeHttpPostIn" />
+      <wsdl:output message="tns:MCVolumeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓煤种修改</wsdl:documentation>
+      <wsdl:input message="tns:MCEditHttpPostIn" />
+      <wsdl:output message="tns:MCEditHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤仓总煤量计算</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalVolumeHttpPostIn" />
+      <wsdl:output message="tns:GetCoalVolumeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">按煤位计算体积</wsdl:documentation>
+      <wsdl:input message="tns:GetVolumeHttpPostIn" />
+      <wsdl:output message="tns:GetVolumeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">编辑煤堆煤量信息</wsdl:documentation>
+      <wsdl:input message="tns:EditCoalYardHttpPostIn" />
+      <wsdl:output message="tns:EditCoalYardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">煤堆清空操作</wsdl:documentation>
+      <wsdl:input message="tns:ClearSeamHttpPostIn" />
+      <wsdl:output message="tns:ClearSeamHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">船舶最新数据查询</wsdl:documentation>
+      <wsdl:input message="tns:GetShipLatestHttpPostIn" />
+      <wsdl:output message="tns:GetShipLatestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">POOLEDB读取pi数据</wsdl:documentation>
+      <wsdl:input message="tns:PIReadHttpPostIn" />
+      <wsdl:output message="tns:PIReadHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">PIOLEDB读取pi数据</wsdl:documentation>
+      <wsdl:input message="tns:PICalcHttpPostIn" />
+      <wsdl:output message="tns:PICalcHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <wsdl:input message="tns:SendSampleCodeHttpPostIn" />
+      <wsdl:output message="tns:SendSampleCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">将文本发送至输煤程控</wsdl:documentation>
+      <wsdl:input message="tns:WorklistSendHttpPostIn" />
+      <wsdl:output message="tns:WorklistSendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤耗数据</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalConsumptionHttpPostIn" />
+      <wsdl:output message="tns:GetCoalConsumptionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤耗趋势数据</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalConsumptionTrendHttpPostIn" />
+      <wsdl:output message="tns:GetCoalConsumptionTrendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取船运数据及煤价</wsdl:documentation>
+      <wsdl:input message="tns:GetShipWithPriceHttpPostIn" />
+      <wsdl:output message="tns:GetShipWithPriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤价趋势</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalPriceTrendHttpPostIn" />
+      <wsdl:output message="tns:GetCoalPriceTrendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取煤场详情</wsdl:documentation>
+      <wsdl:input message="tns:GetCoalYardHttpPostIn" />
+      <wsdl:output message="tns:GetCoalYardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <wsdl:input message="tns:GetDuiQuContentHttpPostIn" />
+      <wsdl:output message="tns:GetDuiQuContentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <wsdl:input message="tns:GetShippingListContentHttpPostIn" />
+      <wsdl:output message="tns:GetShippingListContentHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MC_Unusable">
+      <soap:operation soapAction="YDSM/MC_Unusable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <soap:operation soapAction="YDSM/MC_State" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <soap:operation soapAction="YDSM/VolumeAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <soap:operation soapAction="YDSM/GetAllCoalYardInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <soap:operation soapAction="YDSM/MD_Sorting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <soap:operation soapAction="YDSM/BW_State" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <soap:operation soapAction="YDSM/Blank_Sorting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <soap:operation soapAction="YDSM/JsonToBoilerDefault" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <soap:operation soapAction="YDSM/CoalMix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <soap:operation soapAction="YDSM/CoalMixOpt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <soap:operation soapAction="YDSM/GetSingleTGAndDTG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <soap:operation soapAction="YDSM/TG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <soap:operation soapAction="YDSM/DTG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <soap:operation soapAction="YDSM/MD_Unusable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <soap:operation soapAction="YDSM/Blank_Unusable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <soap:operation soapAction="YDSM/LMQStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <soap:operation soapAction="YDSM/PIValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <soap:operation soapAction="YDSM/GetCoalIdOnBelt10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <soap:operation soapAction="YDSM/PITimedValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <soap:operation soapAction="YDSM/GetCoalID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <soap:operation soapAction="YDSM/MCVolume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <soap:operation soapAction="YDSM/MCEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <soap:operation soapAction="YDSM/GetCoalVolume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <soap:operation soapAction="YDSM/GetVolume" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <soap:operation soapAction="YDSM/EditCoalYard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <soap:operation soapAction="YDSM/ClearSeam" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <soap:operation soapAction="YDSM/GetShipLatest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <soap:operation soapAction="YDSM/PIRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <soap:operation soapAction="YDSM/PICalc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <soap:operation soapAction="YDSM/SendSampleCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <soap:operation soapAction="YDSM/WorklistSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <soap:operation soapAction="YDSM/GetCoalConsumption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <soap:operation soapAction="YDSM/GetCoalConsumptionTrend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <soap:operation soapAction="YDSM/GetShipWithPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <soap:operation soapAction="YDSM/GetCoalPriceTrend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <soap:operation soapAction="YDSM/GetCoalYard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <soap:operation soapAction="YDSM/GetDuiQuContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <soap:operation soapAction="YDSM/GetShippingListContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MC_Unusable">
+      <soap12:operation soapAction="YDSM/MC_Unusable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <soap12:operation soapAction="YDSM/MC_State" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <soap12:operation soapAction="YDSM/VolumeAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <soap12:operation soapAction="YDSM/GetAllCoalYardInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <soap12:operation soapAction="YDSM/MD_Sorting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <soap12:operation soapAction="YDSM/BW_State" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <soap12:operation soapAction="YDSM/Blank_Sorting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <soap12:operation soapAction="YDSM/JsonToBoilerDefault" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <soap12:operation soapAction="YDSM/CoalMix" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <soap12:operation soapAction="YDSM/CoalMixOpt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <soap12:operation soapAction="YDSM/GetSingleTGAndDTG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <soap12:operation soapAction="YDSM/TG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <soap12:operation soapAction="YDSM/DTG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <soap12:operation soapAction="YDSM/MD_Unusable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <soap12:operation soapAction="YDSM/Blank_Unusable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <soap12:operation soapAction="YDSM/LMQStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <soap12:operation soapAction="YDSM/PIValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <soap12:operation soapAction="YDSM/GetCoalIdOnBelt10" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <soap12:operation soapAction="YDSM/PITimedValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <soap12:operation soapAction="YDSM/GetCoalID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <soap12:operation soapAction="YDSM/MCVolume" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <soap12:operation soapAction="YDSM/MCEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <soap12:operation soapAction="YDSM/GetCoalVolume" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <soap12:operation soapAction="YDSM/GetVolume" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <soap12:operation soapAction="YDSM/EditCoalYard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <soap12:operation soapAction="YDSM/ClearSeam" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <soap12:operation soapAction="YDSM/GetShipLatest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <soap12:operation soapAction="YDSM/PIRead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <soap12:operation soapAction="YDSM/PICalc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <soap12:operation soapAction="YDSM/SendSampleCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <soap12:operation soapAction="YDSM/WorklistSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <soap12:operation soapAction="YDSM/GetCoalConsumption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <soap12:operation soapAction="YDSM/GetCoalConsumptionTrend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <soap12:operation soapAction="YDSM/GetShipWithPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <soap12:operation soapAction="YDSM/GetCoalPriceTrend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <soap12:operation soapAction="YDSM/GetCoalYard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <soap12:operation soapAction="YDSM/GetDuiQuContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <soap12:operation soapAction="YDSM/GetShippingListContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpGet" type="tns:WebService1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="MC_Unusable">
+      <http:operation location="/MC_Unusable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <http:operation location="/MC_State" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <http:operation location="/VolumeAvailable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <http:operation location="/GetAllCoalYardInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <http:operation location="/MD_Sorting" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <http:operation location="/BW_State" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <http:operation location="/Blank_Sorting" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <http:operation location="/JsonToBoilerDefault" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <http:operation location="/CoalMix" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <http:operation location="/CoalMixOpt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <http:operation location="/GetSingleTGAndDTG" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <http:operation location="/TG" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <http:operation location="/DTG" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <http:operation location="/MD_Unusable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <http:operation location="/Blank_Unusable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <http:operation location="/LMQStates" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <http:operation location="/PIValue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <http:operation location="/GetCoalIdOnBelt10" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <http:operation location="/PITimedValue" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <http:operation location="/GetCoalID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <http:operation location="/MCVolume" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <http:operation location="/MCEdit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <http:operation location="/GetCoalVolume" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <http:operation location="/GetVolume" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <http:operation location="/EditCoalYard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <http:operation location="/ClearSeam" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <http:operation location="/GetShipLatest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <http:operation location="/PIRead" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <http:operation location="/PICalc" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <http:operation location="/SendSampleCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <http:operation location="/WorklistSend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <http:operation location="/GetCoalConsumption" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <http:operation location="/GetCoalConsumptionTrend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <http:operation location="/GetShipWithPrice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <http:operation location="/GetCoalPriceTrend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <http:operation location="/GetCoalYard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <http:operation location="/GetDuiQuContent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <http:operation location="/GetShippingListContent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpPost" type="tns:WebService1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="MC_Unusable">
+      <http:operation location="/MC_Unusable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MC_State">
+      <http:operation location="/MC_State" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VolumeAvailable">
+      <http:operation location="/VolumeAvailable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCoalYardInfo">
+      <http:operation location="/GetAllCoalYardInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Sorting">
+      <http:operation location="/MD_Sorting" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BW_State">
+      <http:operation location="/BW_State" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Sorting">
+      <http:operation location="/Blank_Sorting" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="JsonToBoilerDefault">
+      <http:operation location="/JsonToBoilerDefault" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMix">
+      <http:operation location="/CoalMix" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoalMixOpt">
+      <http:operation location="/CoalMixOpt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleTGAndDTG">
+      <http:operation location="/GetSingleTGAndDTG" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TG">
+      <http:operation location="/TG" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTG">
+      <http:operation location="/DTG" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MD_Unusable">
+      <http:operation location="/MD_Unusable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Blank_Unusable">
+      <http:operation location="/Blank_Unusable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LMQStates">
+      <http:operation location="/LMQStates" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIValue">
+      <http:operation location="/PIValue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalIdOnBelt10">
+      <http:operation location="/GetCoalIdOnBelt10" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="PITimedValue">
+      <http:operation location="/PITimedValue" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalID">
+      <http:operation location="/GetCoalID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCVolume">
+      <http:operation location="/MCVolume" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MCEdit">
+      <http:operation location="/MCEdit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalVolume">
+      <http:operation location="/GetCoalVolume" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVolume">
+      <http:operation location="/GetVolume" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCoalYard">
+      <http:operation location="/EditCoalYard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearSeam">
+      <http:operation location="/ClearSeam" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipLatest">
+      <http:operation location="/GetShipLatest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PIRead">
+      <http:operation location="/PIRead" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PICalc">
+      <http:operation location="/PICalc" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSampleCode">
+      <http:operation location="/SendSampleCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WorklistSend">
+      <http:operation location="/WorklistSend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumption">
+      <http:operation location="/GetCoalConsumption" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalConsumptionTrend">
+      <http:operation location="/GetCoalConsumptionTrend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipWithPrice">
+      <http:operation location="/GetShipWithPrice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalPriceTrend">
+      <http:operation location="/GetCoalPriceTrend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoalYard">
+      <http:operation location="/GetCoalYard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuiQuContent">
+      <http:operation location="/GetDuiQuContent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShippingListContent">
+      <http:operation location="/GetShippingListContent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://192.168.1.59:8023/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://192.168.1.59:8023/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpGet" binding="tns:WebService1HttpGet">
+      <http:address location="http://192.168.1.59:8023/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpPost" binding="tns:WebService1HttpPost">
+      <http:address location="http://192.168.1.59:8023/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
